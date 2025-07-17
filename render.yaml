@@ -1,9 +1,13 @@
+# Exported from Render on 2025-07-17T12:17:46Z
 services:
-  # A Docker web service
-  - type: web
-    name: fastapi-example
-    runtime: python
-    plan: free
-    autoDeploy: false
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 216.24.60.0/24 --port $PORT
+- type: web
+  name: Test
+  runtime: python
+  repo: https://github.com/Woohoo-code/Test
+  plan: free
+  region: virginia
+  buildCommand: pip install -r requirements.txt
+  startCommand: uvicorn main:app --host 108.46.220.36 --port $PORT
+  autoDeployTrigger: "off"
+version: "1"
+
